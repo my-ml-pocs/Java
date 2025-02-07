@@ -7,7 +7,7 @@ import org.apache.commons.lang3.tuple.Pair;
  */
 public class Calculator {
 
-    private final Baz baz;
+    private static final Baz baz;
 
     public Calculator() {
         this.baz = new Baz();
