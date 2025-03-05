@@ -21,6 +21,7 @@ public class SelenifiedSample extends Selenified {
     
     //TODO  must close on SSL exception
     //sslHandler.setCloseOnSSLException(true);
+    //nothing
 
     @BeforeClass(alwaysRun = true)
     public void beforeClass(ITestContext test) {
