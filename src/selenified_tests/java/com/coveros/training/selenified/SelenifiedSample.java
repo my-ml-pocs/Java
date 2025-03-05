@@ -18,6 +18,9 @@ public class SelenifiedSample extends Selenified {
     static final String LIBRARY_URL = BASE_URL + "library.html";
     static final String RESET_DATABASE_URL = BASE_URL + "flyway";
     String TesNew = "null";
+    
+    //TODO  must close on SSL exception
+    //sslHandler.setCloseOnSSLException(true);
 
     @BeforeClass(alwaysRun = true)
     public void beforeClass(ITestContext test) {
