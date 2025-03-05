@@ -17,6 +17,7 @@ public class SelenifiedSample extends Selenified {
     static final String BASE_URL =  "http://localhost:8080/demo/";
     static final String LIBRARY_URL = BASE_URL + "library.html";
     static final String RESET_DATABASE_URL = BASE_URL + "flyway";
+    String TesNew = "null";
 
     @BeforeClass(alwaysRun = true)
     public void beforeClass(ITestContext test) {
