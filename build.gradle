@@ -267,9 +267,8 @@ check.dependsOn(jacocoTestReport)
 sonarqube {
     properties {
     	property 'sonar.host.url', 'https://sonarcloud.io'
-    	property 'sonar.organization', 'my-ml-pocs'
+    	property 'sonar.organization', 'mymlpocs'
     	property 'sonar.projectKey', 'my-ml-pocs_Java'
-        property "sonar.projectKey", "my-ml-pocs_Java"
         property "sonar.projectName", "Java"
         property "sonar.projectDescription", "A demonstration of a web application with good test coverage and best practices"
         property "sonar.sources", "src/main/java"
