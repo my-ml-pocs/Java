@@ -24,6 +24,21 @@ public class LoginServlet extends HttpServlet {
     static LoginUtils loginUtils = new LoginUtils();
 
     @Override
+    protected void doGet(final HttpServletRequest req, final HttpServletResponse res)
+            throws ServletException, IOException {
+        String redirectUri = req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort() + "/callback";
+        BoxAPIConnection adminClient = BoxHelper.adminClient();
+
+        BoxUser.Info userInfo = BoxUser.getCurrentUser(adminClient).getInfo();
+        System.out.println("Successfully connected as " + userInfo.getLogin());
+        String authorizeUrl = authenticationController.buildAuthorizeUrl(req, redirectUri)
+                .withAudience(String.format("https://%s/userinfo", domain))
+                .withScope("openid email")
+                .build();
+        res.sendRedirect(authorizeUrl);
+    }
+    
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         String username = StringUtils.makeNotNullable(request.getParameter("username"));
         request.setAttribute("username", username);
