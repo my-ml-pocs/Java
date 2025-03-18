@@ -279,8 +279,7 @@ sonarqube {
         property "sonar.java.binaries", "build/classes/java/main"
         property "sonar.junit.reportPaths", "build/test-results/test/,build/test-results/integrate"
         property "sonar.coverage.jacoco.xmlReportPaths", "build/jacoco/jacoco.xml"
-        property "sonar.login", "50989b64aede14557ff0d437b6b132e68344f984"
-        property "sonar.password", "password"
+        property "sonar.token", "50989b64aede14557ff0d437b6b132e68344f984"
     }
 }
 
