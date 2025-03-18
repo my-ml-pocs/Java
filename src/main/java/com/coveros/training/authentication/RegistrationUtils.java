@@ -101,7 +101,7 @@ public class RegistrationUtils {
             logger.info("password was too short");
             return PasswordResult.createDefault(TOO_SHORT);
         }
-        CheckUtils.mustBeTrueAtThisPoint(isTooSmall == false,
+        CheckUtils.mustBeTrueAtThisPoint(!isTooSmall,
                 "At this point, the password cannot be too small");
 
         final boolean isTooLarge = password.length() > 100;
