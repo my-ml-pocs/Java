@@ -49,7 +49,7 @@ public class RegistrationUtils {
 
         if (isUserInDatabase(username)) {
             logger.info("cannot register this user - they are already registered");
-            return new RegistrationResult(false, ALREADY_REGISTERED);
+            return new RegistrationResult(ALREADY_REGISTERED);
         }
         // at this point we know the user is not yet registered in the database
 
