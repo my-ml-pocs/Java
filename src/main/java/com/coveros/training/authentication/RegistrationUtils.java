@@ -63,7 +63,7 @@ public class RegistrationUtils {
         // at this point, we feel assured it's ok to save to the database.
         saveToDatabase(username, password);
         logger.info("saving new user, {}, to database", username);
-        return new RegistrationResult(true, SUCCESSFULLY_REGISTERED);
+        return new RegistrationResult(SUCCESSFULLY_REGISTERED);
     }
 
     public static RegistrationUtils createEmpty() {
