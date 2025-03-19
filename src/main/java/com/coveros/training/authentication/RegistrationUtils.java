@@ -109,7 +109,7 @@ public class RegistrationUtils {
             logger.info("password was too long");
             return PasswordResult.createDefault(TOO_LONG);
         }
-        CheckUtils.mustBeTrueAtThisPoint(isTooLarge == false,
+        CheckUtils.mustBeTrueAtThisPoint(!isTooLarge,
                 "At this point, the password cannot be too large");
 
         // Nbvcxz is a tool that tests entropy on passwords
